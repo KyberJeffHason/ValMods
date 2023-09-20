@@ -32,6 +32,9 @@
       <HintPath>..\packages\HarmonyX.2.5.5\lib\net45\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="assembly_valheim-publicized">
+      <HintPath>D:\Games\ValheimNewest\valheim_Data\Managed\publicized_assemblies\assembly_valheim-publicized.dll</HintPath>
+    </Reference>
     <Reference Include="Jotunn, Version=2.3.7.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\JotunnLib.2.3.7\lib\net462\Jotunn.dll</HintPath>
       <Private>False</Private>

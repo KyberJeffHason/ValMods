@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using Logger = Jotunn.Logger;
 namespace DungeonReset
 {
     public static class Dungeons
@@ -65,15 +65,7 @@ namespace DungeonReset
                     continue;
 
                 ZNetView netView = go.GetComponent<ZNetView>();
-                if (netView != null)
-                {
-                    netView.GetZDO()?.SetOwner(ZDOMan.instance.GetMyID());
-                    netView.Destroy();
-                }
-                else
-                {
-                    ZNetScene.instance.Destroy(go);
-                }
+                ZNetScene.instance.Destroy(go);
             }
             dungeon.Generate(ZoneSystem.SpawnMode.Full);
             dungeon.SetLastReset(DateTimeOffset.Now);
